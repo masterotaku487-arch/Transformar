@@ -204,8 +204,7 @@ Contribuições são bem-vindas! Sinta-se livre para:
 
 ## 👨‍💻 Autor
 
-Desenvolvido com 💚 para a comunidade Minecraft
-Powered by Claude AI
+Desenvolvido com 💚 por **Masterotaku* *para a comunidade Minecraft
 
 ## 📞 Suporte
 

@@ -204,7 +204,7 @@ Contribuições são bem-vindas! Sinta-se livre para:
 
 ## 👨‍💻 Autor
 
-Desenvolvido com 💚 por **Masterotaku** para a comunidade Minecraft
+Desenvolvido com 💜 por **Masterotaku** para a comunidade Minecraft
 
 ## 📞 Suporte
 

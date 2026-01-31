@@ -1,0 +1,130 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Minecraft Java → Bedrock Transpiler</title>
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link href="https://fonts.googleapis.com/css2?family=Press+Start+2P&family=Inter:wght@300;400;600;700&display=swap" rel="stylesheet">
+</head>
+<body>
+    <div class="container">
+        <!-- Header -->
+        <header class="header">
+            <div class="logo">
+                <span class="minecraft-text">⛏️ MC Transpiler</span>
+            </div>
+            <div class="subtitle">
+                Converta mods Java Edition para Bedrock Edition
+            </div>
+        </header>
+
+        <!-- Upload Section -->
+        <section class="upload-section" id="uploadSection">
+            <div class="upload-box" id="uploadBox">
+                <div class="upload-icon">📦</div>
+                <h2>Arraste seu mod .jar aqui</h2>
+                <p>ou clique para selecionar</p>
+                <input type="file" id="fileInput" accept=".jar" hidden>
+                <button class="btn-primary" onclick="document.getElementById('fileInput').click()">
+                    Selecionar Arquivo
+                </button>
+                <div class="info">
+                    <small>Máximo: 100MB | Apenas arquivos .jar</small>
+                </div>
+            </div>
+
+            <div class="features">
+                <div class="feature-card">
+                    <div class="feature-icon">🔧</div>
+                    <h3>Análise Automática</h3>
+                    <p>Detecta items, receitas e comportamentos</p>
+                </div>
+                <div class="feature-card">
+                    <div class="feature-icon">⚡</div>
+                    <h3>Scripts Gerados</h3>
+                    <p>Cria scripts JS para mecânicas complexas</p>
+                </div>
+                <div class="feature-card">
+                    <div class="feature-icon">📱</div>
+                    <h3>Bedrock Ready</h3>
+                    <p>Arquivo .mcaddon pronto para usar</p>
+                </div>
+            </div>
+        </section>
+
+        <!-- Processing Section -->
+        <section class="processing-section hidden" id="processingSection">
+            <div class="processing-card">
+                <div class="processing-header">
+                    <h2 id="processingTitle">Processando...</h2>
+                    <div class="processing-status" id="processingStatus">Preparando...</div>
+                </div>
+                
+                <div class="progress-bar">
+                    <div class="progress-fill" id="progressFill"></div>
+                    <div class="progress-text" id="progressText">0%</div>
+                </div>
+
+                <div class="processing-details">
+                    <div class="detail-item">
+                        <span class="detail-label">Arquivo:</span>
+                        <span class="detail-value" id="fileName">-</span>
+                    </div>
+                    <div class="detail-item">
+                        <span class="detail-label">Status:</span>
+                        <span class="detail-value" id="statusMessage">-</span>
+                    </div>
+                </div>
+
+                <div class="processing-stats hidden" id="statsSection">
+                    <h3>📊 Estatísticas</h3>
+                    <div class="stats-grid">
+                        <div class="stat-card">
+                            <div class="stat-value" id="statItems">0</div>
+                            <div class="stat-label">Items</div>
+                        </div>
+                        <div class="stat-card">
+                            <div class="stat-value" id="statRecipes">0</div>
+                            <div class="stat-label">Receitas</div>
+                        </div>
+                        <div class="stat-card">
+                            <div class="stat-value" id="statScripts">0</div>
+                            <div class="stat-label">Scripts</div>
+                        </div>
+                        <div class="stat-card">
+                            <div class="stat-value" id="statAssets">0</div>
+                            <div class="stat-label">Assets</div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="actions hidden" id="actionsSection">
+                    <button class="btn-success" id="downloadBtn">
+                        ⬇️ Baixar .mcaddon
+                    </button>
+                    <button class="btn-secondary" onclick="resetForm()">
+                        🔄 Converter Outro Mod
+                    </button>
+                </div>
+
+                <div class="error-message hidden" id="errorMessage">
+                    <div class="error-icon">❌</div>
+                    <h3>Erro no processamento</h3>
+                    <p id="errorText"></p>
+                    <button class="btn-secondary" onclick="resetForm()">Tentar Novamente</button>
+                </div>
+            </div>
+        </section>
+
+        <!-- Footer -->
+        <footer class="footer">
+            <p>Desenvolvido com 💚 para a comunidade Minecraft</p>
+            <p class="small">Versão 1.0.0 | Powered by Claude AI</p>
+        </footer>
+    </div>
+
+    <script src="js/app.js"></script>
+</body>
+</html>

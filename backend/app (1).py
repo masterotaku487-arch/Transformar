@@ -3,7 +3,11 @@ Servidor Web para Motor de Transpilação Minecraft
 API REST para conversão de mods Java → Bedrock
 Versão 2.0 - Compatível com transpiler_engine v2
 """
+import sys
+import os
+sys.path.append(os.path.dirname(os.path.abspath(__file__)))
 
+from transpiler_engine import transpile_jar
 from flask import Flask, request, jsonify, send_file, send_from_directory
 from flask_cors import CORS
 from werkzeug.utils import secure_filename

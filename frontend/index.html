@@ -4,7 +4,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Minecraft Java → Bedrock Transpiler</title>
-    <link rel="manifest" href="manifest.json">
+    <link rel="manifest" href="../manifest.json">
     <link rel="stylesheet" href="css/style.css">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link href="https://fonts.googleapis.com/css2?family=Press+Start+2P&family=Inter:wght@300;400;600;700&display=swap" rel="stylesheet">
@@ -128,9 +128,10 @@
     
     <script src="js/app.js"></script>
     <script>
-      if ('serviceWorker' in navigator) {
-        navigator.serviceWorker.register('/service-worker.js');
-      }
+  if ('serviceWorker' in navigator) {
+    // O '../' diz ao navegador para sair da pasta frontend e procurar na raiz
+    navigator.serviceWorker.register('../service-worker.js'); 
+  }
     </script>
   </body>
 </html>

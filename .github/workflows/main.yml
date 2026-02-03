@@ -1,0 +1,17 @@
+name: Build APK
+on: [push]
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout Code
+        uses: actions/checkout@v2
+
+      - name: Build Android APK
+        uses: pavi2410/PWA2APK@v1.0
+        with:
+          # URL onde o seu GitHub Pages está rodando
+          url: https://masterotaku487-arch.github.io/Transformar/
+          name: MC Transpiler
+          

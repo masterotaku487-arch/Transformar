@@ -1,0 +1,21 @@
+# Render Deploy Config - Minecraft Converter + IA
+services:
+  - type: web
+    name: minecraft-converter-ai
+    runtime: python
+    region: oregon
+    plan: free
+    
+    buildCommand: |
+      pip install --upgrade pip
+      pip install -r requirements.txt
+    
+    startCommand: python app.py
+    
+    envVars:
+      - key: GROQ_API_KEY
+        sync: false
+      - key: PYTHON_VERSION
+        value: "3.11"
+    
+    healthCheckPath: /

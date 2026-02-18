@@ -1,3 +1,16 @@
+# Minecraft Converter + IA - ALL Dependencies
+
+# Web Frameworks
 Flask==3.0.0
 Flask-CORS==4.0.0
 Werkzeug==3.0.1
+gradio>=4.0.0
+gunicorn>=21.0.0
+
+# IA
+groq>=0.4.0
+gtts>=2.3.0
+
+# Utils
+requests>=2.31.0
+pillow>=10.0.0

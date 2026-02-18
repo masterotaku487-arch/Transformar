@@ -1,0 +1,27 @@
+# Render Deploy Config - Minecraft Converter + IA
+services:
+  - type: web
+    name: minecraft-converter-ai
+    runtime: python
+    region: oregon
+    plan: free
+    
+    # Build
+    buildCommand: |
+      pip install --upgrade pip
+      cd backend && pip install -r requirements.txt
+    
+    # ✅ IMPORTANTE: Gradio usa seu próprio servidor
+    startCommand: cd backend && python app.py
+    
+    # Variáveis
+    envVars:
+      - key: GROQ_API_KEY
+        sync: false
+      - key: PYTHON_VERSION
+        value: "3.11"
+      - key: PORT
+        value: "7860"
+    
+    # Health check
+    healthCheckPath: /
